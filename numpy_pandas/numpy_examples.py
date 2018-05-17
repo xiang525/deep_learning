@@ -119,3 +119,49 @@ print (A[1,1])
 print (A[2:])
 # the whole column
 print (A[:,1])
+# use for loop to control a matrix
+for row in A:
+    print (row)
+
+for column in A.T:
+    print (column)
+
+print (A.flatten())
+# loop for each element
+for item in A.flat:
+    print (item)
+
+
+"""""""""""""""""""""""""""""""""""""""
+Video 8 
+"""""""""""""""""""""""""""""""""""""""
+# combine two arrays
+A = np.array([1,1,1])
+B = np.array([2,2,2])
+# vertical stack
+C = np.vstack((A, B))
+print (C)
+print (A.shape, C.shape)
+# horizontal stack
+D = np.hstack((A, B))
+print (D)
+print (D.shape)
+# convert horizontal vector to a vertical vector
+print (A[np.newaxis,:])
+# convert vertical vector to a horizontal vector
+print (A[:,np.newaxis])
+# combine multiple arrays
+C = np.concatenate((A, B, B, A))
+print (C)
+C = np.concatenate((A, B, B, A), axis=0)
+print (C)
+
+
+"""""""""""""""""""""""""""""""""""""""
+Video 9
+"""""""""""""""""""""""""""""""""""""""
+A = np.arange(12).reshape((3,4))
+print (A)
+# must be equally splitted 
+print (np.split(A, 2, axis=1))
+print (np.split(A, 3, axis=0))
